@@ -1,0 +1,8 @@
+<template name="postItem">
+	<div class="post">
+		<div class="post-content">
+			<h3><a href="{{pathFor 'postPage'}}">{{subject}}:&nbsp;{{grade}}&nbsp;</a><span>Posted by:&nbsp;{{author}}&nbsp;on&nbsp;{{date}}</span></h3>
+		</div>
+		<a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">View</a>
+	</div>
+</template>

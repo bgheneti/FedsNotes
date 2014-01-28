@@ -1,0 +1,7 @@
+<template name="fileTest">
+    {{#each files}}
+    {{cfsDownloadButton "ContactsFS" class="btn btn-primary btn-mini" content=filename}}
+    {{else}}
+    No files uploaded.
+    {{/each}}
+</template>

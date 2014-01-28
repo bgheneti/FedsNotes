@@ -1,0 +1,66 @@
+<template name="postEdit">
+<form class="main">
+	<br>
+	<div class="controlgroup">
+	<label class="control-label" for="subject">Subject</label>
+	<br>
+		<div class="controls">
+			<input name="subject" type="text" value="{{subject}}" placeholder="{{subject}}" class="form-control"/>
+		</div>
+	</div>
+	<br>
+	<label class="control-label" for="grade">Grade</label>
+	<br>
+	<div class="control-group">
+		<div class="controls">
+			<input name="grade" type="text" value="{{grade}}" placeholder="{{grade}}" class="form-control"/>
+		</div>
+	</div>
+	<br>
+	<label class="control-label" for="description">Description</label>
+	<br>
+	<div class="control-group">
+		<div class="controls">
+			<textarea name="description" type="text" value="{{description}}" placeholder="{{description}}" style="color:black" class="form-control">
+			</textarea>
+		</div>
+	</div>
+	<br>
+	<hr style="border-top: solid 3px; height:5px">
+	<h3 style="padding-bottom:50px">Chapters</h3>
+	{{#each chapters}}
+		{{>chapterEdit}}
+	{{/each}}
+
+	<div>
+	<div class="col-md-9">
+		<div class="col9">
+		
+		</div>
+		<button type="button" class="btn btn-default chapter">Add Chapter</button>
+	</div>
+
+	<div class="col-md-3">
+		
+	</div>
+	</div>
+	<br>
+	<br>
+
+
+	<div>
+	<div class="control-group" style="width:100%, display:box">
+		<br>
+		<div class="controls">
+			<input type="submit" value="Submit" class="btn btn-primary submit form-control"/>
+		</div>
+	</div>
+	<br>
+	<div class="controls-group">
+		<div class="controls">
+			<a class="btn btn-danger delete form-control" href="#"> Delete Subject Notes</a>
+		</div>
+	</div>
+	</div>
+</form>
+</template>

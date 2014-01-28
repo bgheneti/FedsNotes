@@ -1,0 +1,12 @@
+<template name="chapter">
+<div style="width:100%">
+<div><h4>{{chapter}}</h4></div>
+<div style="text-align:center; margin:0 auto; width:100%"><h5 style="text-align:center; margin:0 auto">
+	{{#each fileUrl}}
+    {{cfsDownloadButton "FilesFS" class="btn btn-primary btn-mini" content=filename}}
+    {{else}}
+    No files to load.
+    {{/each}}
+</h5></div>
+</div>
+</template>

@@ -1,0 +1,32 @@
+<template name="postItemPage" onload="allChapters()">
+
+	<div class="post">
+		<div>
+		<div class="post-content">
+			<h3><a href="{{pathFor 'postPage'}}">{{subject}}:&nbsp;{{grade}}&nbsp;</a><span>Posted by:&nbsp;{{author}}&nbsp;on&nbsp;{{date}}</span></h3>
+		</div>
+		</div>
+		<br>
+		<hr>
+		<p>{{description}}</p>
+		<hr>
+		&nbsp; &nbsp; &nbsp;
+<span class='st_facebook_hcount' displayText='Facebook'></span>
+<span class='st_twitter_hcount' displayText='Tweet'></span>
+<span class='st_email_hcount' displayText='Email'></span>
+		<div style="text-align:right">
+			{{#if allowedToEdit}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+		</div>
+	</div>
+	<div>
+	<h3 style="text-align:center; color:#428bca">Chapters</h3>
+	</div>
+	<div class="post">
+		<div class="post-content" style="width:100%">
+	{{#each chapters}}
+		{{>chapter}}
+	{{/each}}
+	</div>
+	</div>
+</template>
+

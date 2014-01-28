@@ -1,0 +1,23 @@
+<template name="chapterEdit">
+<div class="toggled toggleA {{chapterId}}">
+		<div><h4>{{chapter}}</h4></div>
+<div style="text-align:center; margin:0 auto;"><h5 style="text-align:center; margin:0 auto">
+	{{#each fileUrl}}
+    {{cfsDownloadButton "FilesFS" class="btn btn-primary btn-mini" content=filename}}
+    {{else}}
+    No files to load.
+    {{/each}}
+</h5></div>
+</div>
+<div style="text-align:right">
+<a class="edit-toggle normEdit">edit</a>
+</div>
+	<hr>
+</template>
+
+<!-- 
+<div class="control-group">
+<input name="chapter" type="text" value="{{chapter}}" placeholder="{{chapter}}" class="form-control"/>
+			<input type="file" class="fileUploader" Text="change files">
+					<div class="controls">
+			<a class="btn btn-danger delete form-control" href="#">change chapter</a></div></div> -->
